@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sweet Bakery</title>
+
+<style>
+body{
+font-family: Arial;
+background:#fff3e6;
+text-align:center;
+}
+
+header{
+background:#ff7a59;
+padding:20px;
+color:white;
+}
+
+.products{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.card{
+background:white;
+padding:20px;
+margin:15px;
+border-radius:10px;
+width:200px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+form{
+margin-top:40px;
+background:white;
+padding:20px;
+width:300px;
+margin-left:auto;
+margin-right:auto;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+input,select{
+width:90%;
+padding:8px;
+margin:10px;
+}
+
+button{
+background:#ff7a59;
+color:white;
+border:none;
+padding:10px;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff4d2d;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Sweet Bakery 🍰</h1>
+<p>Fresh and Delicious Bakery Items</p>
+</header>
+
+<div class="products">
+
+<div class="card">
+<h2>Pizza 🍕</h2>
+<p>Price ₹50</p>
+</div>
+
+<div class="card">
+<h2>Cake 🎂</h2>
+<p>Price ₹40</p>
+</div>
+
+<div class="card">
+<h2>Cup Cake 🧁</h2>
+<p>Price ₹30</p>
+</div>
+
+<div class="card">
+<h2>Pudding 🍮</h2>
+<p>Price ₹40</p>
+</div>
+
+</div>
+
+<form id="orderForm">
+<h3>Order Now</h3>
+
+<input type="text" placeholder="Your Name" required>
+
+<select required>
+<option value="">Select Product</option>
+<option>Pizza</option>
+<option>Cake</option>
+<option>Cup Cake</option>
+<option>Pudding</option>
+</select>
+
+<input type="number" placeholder="Quantity" required>
+
+<input type="text" placeholder="Address" required>
+
+<button type="submit">Place Order</button>
+
+</form>
+
+<script>
+document.getElementById("orderForm").addEventListener("submit", function(e){
+e.preventDefault();
+alert("Your order has been placed! 🎉");
+});
+</script>
+
+</body>
+</html>
